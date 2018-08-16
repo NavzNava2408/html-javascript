@@ -1,0 +1,69 @@
+<!doctype HTML>
+
+<HTML>
+<title>Add</title>
+<Header><B><Font size=18>Calculator</Font><B></Header>
+<script>
+function add(){
+if(window.document.F2.T1.value==""){
+window.alert("First No is missing");
+window.document.F2.T1.focus();
+}
+if(window.document.F2.T2.value==""){
+window.alert.("Second No is missing");
+window.document.F2.T1.focus();
+}
+var A=window.document.F2.T1.value;
+var B=window.document.F2.T2.value;
+var C=parseFloat(A) + parseFloat(B);
+window.document.F2.T3.value=C;
+}
+function sub(){
+if(window.document.F2.T1.value==""){
+window.alert("First No is missing");
+window.document.F2.T1.focus();
+}
+var A=window.document.F2.T1.value;
+var B=window.document.F2.T2.value;
+var C=parseFloat(A) - parseFloat(B);
+window.document.F2.T3.value=C;
+
+}
+function mult(){
+if(window.document.F2.T1.value==""){
+window.alert("First No is missing");
+window.document.F2.T1.focus();
+}
+var A=window.document.F2.T1.value;
+var B=window.document.F2.T2.value;
+var C=parseFloat(A) * parseFloat(B);
+window.document.F2.T3.value=C;
+}
+function divi(){
+if(window.document.F2.T1.value==""){
+window.alert("First No is missing");
+window.document.F2.T1.focus();
+}
+var A=window.document.F2.T1.value;
+var B=window.document.F2.T2.value;
+var C=parseFloat(A) / parseFloat(B);
+window.document.F2.T3.value=C;
+}
+
+
+</script>
+
+<body>
+<br>
+<Form Name="F2">
+<B>First Number:</B><input type="Text" Name="T1"><br>
+<B>Second Number:</B><input type="Text" Name="T2"><br>
+<br>
+<input type="Button" Name="B" Value="+" onclick="add()">
+<input type="Button" Name="B" Value="-" onclick="sub()">
+<input type="Button" name="B" Value="x" onclick="mult()">
+<input type="Button" name="B" value="/" onclick="divi()"><br>
+<br>
+<B>Total:</B><input type="Text" Name="T3">
+</body>
+</HTML>

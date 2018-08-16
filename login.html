@@ -1,0 +1,32 @@
+<html>
+
+<script>
+function check(){
+var r="true";
+if(document.getElementById("A1").value==""){
+document.getElementById("s1").style.visibility="visible";
+document.getElementById("s2").style.visibility="visible";
+document.getElementById("A1").focus();
+r = "false";
+}
+if(document.getElementById("B2").value==""){
+document.getElementById("s3").style.visibility="visible";
+document.getElementById("s4").style.visibility="visible";
+document.getElementById("B2").focus();
+r = "false";
+}
+if (r=="false"){return false;}
+
+}
+
+</script>
+<h><B>LOGIN</B></h>
+<br>
+<form name="frm" action="Process.html" method="post" onSubmit="return check()">
+<br>
+<B>User Name <span style="visibility:hidden; color:red" id="s1">*</span>:</B> <input type="text" name="A" id="A1"> <span style="visibility:hidden; color:red" id="s2">username missing</span> <br>
+<br>
+<B>Password <span style="visibility:hidden; color:red" id="s3">*</span> :</B> <input type="text" name="B" id="B2"><span style="visibility:hidden; color:red" id="s4">password missing</span><br>
+<br>
+<input type="image" src="tick.jpg" alt="submit" width="50" height="50" style="position:absolute; top:130; left:270">
+</form>

@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+<script>
+function convert(){
+var num = [ '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']; <!--This is an array of stuff-->
+var tens = ['', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety', 'hundred'];
+var T1 = window.document.F.Text1;
+var T2 = window.document.F.Text2;
+var A = parseInt(T1.value);
+
+if (A==0) T2.value="zero";
+if(A>0 & A<=20) T2.value=num[A]; 
+if(A>20 & A<=100) T2.value=tens[Math.floor(A/10)] + " " + num[A%10];
+if(A>100 & A<=999 &  A%100>0 & A%100<=20) T2.value=num[Math.floor(A/100)] + " " + "hundred" + " " + "and" + " " + num[A%100];
+if(A>100 & A<=999 & A%100>20) T2.value=num[Math.floor(A/100)] + " " + "hundred" + " " + "and" + " " + tens[Math.floor((A%100)/10)] + " " + num[(A%100)%10];
+if(A>100 & A<=999 & A%100==0) T2.value=num[Math.floor(A/100)] + " " + "hundred" 
+if(A>=1000 & A<= 9999 & (A%1000)%100==0) T2.value=num[Math.floor(A/1000)] + " " + "thousand";
+if(A>=1000 & A<=9999 & A%1000 < 100){ 
+if((A%1000)%100==0) T2.value=num[Math.floor(A/1000)] + " " + "thousand";
+else if((A%1000)%100>0 & (A%1000)%100 <=20){
+	T2.value=num[Math.floor(A/1000)] + " " + "thousand" + num[Math.floor((A%1000)/100)] + " " + "and" + " " + num[((A%1000)%100)];}
+else{
+T2.value=num[Math.floor(A/1000)] + " " + "thousand" + num[Math.floor((A%1000)/100)] + " " + "and" + " " + tens[Math.floor(((A%1000)%100)/10)] + " " + num[(((A%1000)%100)%10)];}
+}
+if(A>=1000 & A<=9999 & A%1000 >=100){ 
+	if((A%1000)%100==0) T2.value=num[Math.floor(A/1000)] + " " + "thousand";
+	else if((A%1000)%100>0 & (A%1000)%100 <=20){
+	T2.value=num[Math.floor(A/1000)] + " " + "thousand" + " " + num[Math.floor((A%1000)/100)] + " " + "hundred" + " " + "and" + " " + num[((A%1000)%100)];}
+	else{
+T2.value=num[Math.floor(A/1000)] + " " + "thousand" + " " + num[Math.floor((A%1000)/100)] + " " + "hundred" + " " + "and" + " " + tens[Math.floor(((A%1000)%100)/10)] + " " + num[(((A%1000)%100)%10)];}
+}
+
+}
+</script>
+
+<header><B><i><font size="16" color="Green">Digits to String</font></i><B>
+<body>
+<form name="F">
+<br>
+<B><i>Number in digits: </i><B><input name="Text1"> <br>
+<br>
+<input type="button" value="Convert" onclick="convert()"> <br>
+<br>
+<B><i>Number in words: </i><B> <input name="Text2" size="35"> <br>
+<br> 
+</form>
+</body>
+</html>

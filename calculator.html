@@ -1,0 +1,133 @@
+
+<html>
+<script>
+var A=0;
+var B=0;
+var L="";
+function num(C){
+var T = window.document.getElementById("T1");
+T.value= T.value + C
+}
+
+function add(){
+var T = window.document.getElementById("T1");
+if (A==0){ A = T.value;}
+else{B = T.value;}
+if(L=="a"){
+A = parseInt(A) + parseInt(B);}
+if(L=="m"){
+A = parseInt(A) - parseInt(B);}
+if(L=="d"){
+A = parseInt(A) / parseInt(B);}
+if(L=="mu"){
+A = parseInt(A) * parseInt(B);}
+
+L="a";
+T.value="";
+}
+
+function equals(){
+var T = window.document.getElementById("T1");
+B = T.value;
+if(L=="a"){
+T.value = parseInt(A) + parseInt(B);}
+if(L=="m"){
+T.value = parseInt(A) - parseInt(B);}
+if(L=="d"){
+T.value = parseInt(A) / parseInt(B);}
+if(L=="mu"){
+T.value = parseInt(A) * parseInt(B);}
+}
+
+function minus(){
+var T = window.document.getElementById("T1");
+if (A==0){ A = T.value;}
+else{B = T.value;}
+if(L=="a"){
+A = parseInt(A) + parseInt(B);}
+if(L=="m"){
+A = parseInt(A) - parseInt(B);}
+if(L=="d"){
+A = parseInt(A) / parseInt(B);}
+if(L=="mu"){
+A = parseInt(A) * parseInt(B);}
+
+L="m";
+T.value="";
+}
+
+function multi(){
+var T = window.document.getElementById("T1");
+if (A==0){ A = T.value;}
+else{B = T.value;}
+if(L=="a"){
+A = parseInt(A) + parseInt(B);}
+if(L=="m"){
+A = parseInt(A) - parseInt(B);}
+if(L=="d"){
+A = parseInt(A) / parseInt(B);}
+if(L=="mu"){
+A = parseInt(A) * parseInt(B);}
+
+L="mu";
+T.value="";
+}
+
+function div(){
+var T = window.document.getElementById("T1");
+if (A==0){ A = T.value;}
+else{B = T.value;}
+if(L=="a"){
+A = parseInt(A) + parseInt(B);}
+if(L=="m"){
+A = parseInt(A) - parseInt(B);}
+if(L=="d"){
+A = parseInt(A) / parseInt(B);}
+if(L=="mu"){
+A = parseInt(A) * parseInt(B);}
+
+L="d";
+T.value="";
+}
+
+function navani(){
+var T = window.document.getElementById("T1");
+T.value="";
+A=0;
+B=0;
+L="";
+
+}
+
+</script>
+
+
+<input id="T1" style="width:440px; height:50">
+<table border="1" bgcolor="red">
+<tr>
+<td width="100" height="100"><input type="button" value="0" id="B0" style="width:90; height:90" onclick="num(0)"> </td>
+<td width="100" height="100"><input type="button" value="1" id="B1" style="width:90; height:90" onclick="num(1)"></td>
+<td width="100" height="100"><input type="button" value="2" id="B2" style="width:90; height:90" onclick="num(2)"></td>
+<td width="100" height="100"><input type="button" value="+" id="BP" style="width:90; height:90" onclick="add()"></td>
+</tr>
+<tr>
+<td width="100" height="100"><input type="button" value="3" id="B3" style="width:90; height:90" onclick="num(3)"></td>
+<td width="100" height="100"><input type="button" value="4" id="B4" style="width:90; height:90" onclick="num(4)"></td>
+<td width="100" height="100"><input type="button" value="5" id="B5" style="width:90; height:90" onclick="num(5)"></td>
+<td width="100" height="100"><input type="button" value="-" id="BM" style="width:90; height:90" onclick="minus()"></td>
+</tr>
+<tr>
+<td width="100" height="100"><input type="button" value="6" id="B6" style="width:90; height:90" onclick="num(6)"></td>
+<td width="100" height="100"><input type="button" value="7" id="B7" style="width:90; height:90" onclick="num(7)"></td>
+<td width="100" height="100"><input type="button" value="8" id="B8" style="width:90; height:90" onclick="num(8)"></td>
+<td width="100" height="100"><input type="button" value="X" id="BMu" style="width:90; height:90" onclick="multi()"></td>
+</tr>
+<tr>
+<td width="100" height="100"><input type="button" value="9" id="B9" style="width:90; height:90" onclick="num(9)"></td>
+<td width="100" height="100"><input type="button" value="C" id="BC" style="width:90; height:90" onclick="navani()"></td>
+<td width="100" height="100"><input type="button" value="/" id="BD" style="width:90; height:90" onclick="div()"></td>
+<td width="100" height="100"><input type="button" value="=" id="BE" style="width:90; height:90" onclick="equals()"></td>
+</tr>
+</table>
+</html>
+ 

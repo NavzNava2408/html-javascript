@@ -1,0 +1,107 @@
+<html>
+
+<script>
+function visibility(a,b,c,d,e,f,g,h,i,j){
+if(a==1){
+document.getElementById("c2").style.visibility= "visible";}
+else{document.getElementById("c2").style.visibility= "hidden";}
+if(b==1){
+document.getElementById("c3").style.visibility= "visible";}
+else{document.getElementById("c3").style.visibility= "hidden";}
+if(c==1){
+document.getElementById("c4").style.visibility= "visible";}
+else{document.getElementById("c4").style.visibility= "hidden";}
+if(d==1){
+document.getElementById("c6").style.visibility= "visible";}
+else{document.getElementById("c6").style.visibility= "hidden";}
+if(e==1){
+document.getElementById("c7").style.visibility= "visible";}
+else{document.getElementById("c7").style.visibility= "hidden";}
+if(f==1){
+document.getElementById("c8").style.visibility= "visible";}
+else{document.getElementById("c8").style.visibility= "hidden";}
+if(g==1){
+document.getElementById("s9").style.visibility= "visible";}
+else{document.getElementById("s9").style.visibility= "hidden";}
+if(h==1){
+document.getElementById("s10").style.visibility= "visible";}
+else{document.getElementById("s10").style.visibility= "hidden";}
+if(i==1){
+document.getElementById("s11").style.visibility= "visible";}
+else{document.getElementById("s11").style.visibility= "hidden";}
+if(j==1){
+document.getElementById("s12").style.visibility= "visible";}
+else{document.getElementById("s12").style.visibility= "hidden";}
+}
+
+function bgc(a,b,c,d,e,f,g,h){
+if(a==1){
+document.getElementById("c1").style.backgroundColor= "blue";}
+else{document.getElementById("c1").style.backgroundColor= "white";}
+if(b==1){
+document.getElementById("c2").style.backgroundColor= "blue";}
+else{document.getElementById("c2").style.backgroundColor= "white";}
+if(c==1){
+document.getElementById("c3").style.backgroundColor= "blue";}
+else{document.getElementById("c3").style.backgroundColor= "white";}
+if(d==1){
+document.getElementById("c4").style.backgroundColor= "blue";}
+else{document.getElementById("c4").style.backgroundColor= "white";}
+if(e==1){
+document.getElementById("c5").style.backgroundColor= "blue";}
+else{document.getElementById("c5").style.backgroundColor= "white";}
+if(f==1){
+document.getElementById("c6").style.backgroundColor= "blue";}
+else{document.getElementById("c6").style.backgroundColor= "white";}
+if(g==1){
+document.getElementById("c7").style.backgroundColor= "blue";}
+else{document.getElementById("c7").style.backgroundColor= "white";}
+if(h==1){
+document.getElementById("c8").style.backgroundColor= "blue";}
+else{document.getElementById("c8").style.backgroundColor= "white";}
+}
+
+
+</script>
+
+<body bgcolor="grey">
+<br>
+<table border="1" bgcolor="grey" onmouseleave="visibility(0,0,0,0,0,0,0,0,0,0); bgc(0,0,0,0,0,0,0,0)">
+<tr>
+<td id="c1" bgcolor="white" align="center"><font size="14"><b><span  id="s1"  onmouseenter="visibility(1,1,1,0,0,0,0,0,0,0); bgc(1,0,0,0,0,0,0,0)" onmouseleave="bgc(1,0,0,0,0,0,0,0)" >Countries</b></font></span></td>
+</tr>
+<tr>
+<td id="c2" bgcolor="white" align="center" style="visibility:hidden"><span  id="s2" onmouseenter="bgc(1,1,0,0,0,0,0,0); visibility(1,1,1,0,0,0,1,1,0,0)" onmouseleave="bgc(1,0,0,0,0,0,0,0); visibility(1,1,1,0,0,0,0,0,0,0)">UK</span></td>
+</tr>
+<tr>
+<td id="c3" bgcolor="white" align="center" style="visibility:hidden"><span  id="s3" onmouseenter="bgc(1,0,1,0,0,0,0,0); visibility(1,1,1,0,0,0,0,0,1,1)" onmouseleave="bgc(1,0,0,0,0,0,0,0); visibility(1,1,1,0,0,0,0,0,0,0)">USA</span></td>
+</tr>
+<tr>
+<td id="c4" bgcolor="white" align="center" style="visibility:hidden"><span  id="s4" onmouseenter="bgc(1,0,0,1,0,0,0,0)" onmouseleave="bgc(1,0,0,0,0,0,0,0)">Sri Lanka</span></td>
+</tr>
+</table>
+
+<table border="1" bgcolor="grey" style="position:absolute; top:25; left:300" onmouseleave="visibility(0,0,0,0,0,0,0,0); bgc(0,0,0,0,0,0,0,0)">
+<tr>
+<td id="c5" bgcolor="white" align="center"><font size="14"><b><span  id="s5"  onmouseenter="visibility(0,0,0,1,1,1,0,0); bgc(0,0,0,0,1,0,0,0)" onmouseleave="bgc(0,0,0,0,1,0,0,0)" >Sports</b></font></span></td>
+</tr>
+<tr>
+<td id="c6" bgcolor="white" align="center" style="visibility:hidden"><span  id="s6" onmouseenter="bgc(0,0,0,0,1,1,0,0)" onmouseleave="bgc(0,0,0,0,1,0,0,0)">Cricket</span></td>
+</tr>
+<tr>
+<td id="c7" bgcolor="white" align="center" style="visibility:hidden"><span  id="s7" onmouseenter="bgc(0,0,0,0,1,0,1,0)" onmouseleave="bgc(0,0,0,0,1,0,0,0)">Tennis</span></td>
+</tr>
+<tr>
+<td id="c8" bgcolor="white" align="center" style="visibility:hidden"><span  id="s8" onmouseenter="bgc(0,0,0,0,1,0,0,1)" onmouseleave="bgc(0,0,0,0,1,0,0,0)">Kabaddi</span></td>
+</tr>
+</table>
+
+<span style="position:absolute; top:200; left:20; visibility:hidden" id="s9"><img src="UKFlag.png" width="50" height="50"></img> </span>
+<span style="position:absolute; top:220; left:80; visibility:hidden" id="s10">UK is awesome because Navani was born there! God save our gracious queen, long live our noble queen, god save the queen!!</span>
+<span style="position:absolute; top:200; left:20; visibility:hidden" id="s11"><img src="USAFlag.png" width="50" height="50"></img> </span>
+<span style="position:absolute; top:220; left:80; visibility:hidden" id="s12">USA is awesome because Navani has uncles that live there! Oh say can you see, by the dawn's early light what so proudly we hailed at the twilights last gleaming!!</span>
+
+
+
+
+

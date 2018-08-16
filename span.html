@@ -1,0 +1,33 @@
+
+
+<html>
+<script>
+var FS = 10;
+function moving(){
+var SPAN = window.document.getElementById("sp");
+SPAN.style.top = window.event.clientY;
+SPAN.style.left = window.event.clientX;
+}
+
+function increment(){
+var T = window.document.getElementById("sp");
+T.style.fontSize = ++FS;
+}
+
+function decrement(){
+var t = window.document.getElementById("sp");
+t.style.fontSize = --FS;
+}
+</script>
+
+<body onmouseMove="moving()">
+<span style="Position:absolute; top:0 ; left:0" id="sp">
+QA Consulting
+</span>
+<br>
+<br>
+<br>
+<input type="Button" value="Increment" onmousemove="increment()">
+<input type="Button" value="Decrement" onmousemove="decrement()">
+</body>
+</html>

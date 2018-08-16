@@ -1,0 +1,84 @@
+<!doctype HTML>
+
+<HTML>
+<title>Strings</title>
+<header><B><Font Face="Verdana" size=16 color="Blue">String Filter!</Font><B></header>
+
+<script>
+
+function caps(){
+window.document.F.T2.value="";
+var A=window.document.F.T1.value
+var i=0
+var special = [',','?','<','>','*',')','('];
+while(i <= A.length){
+var char=A.charAt(i);
+if (char == char.toUpperCase() & isNaN(char) & special.indexOf(char)==-1 ){
+window.document.F.T2.value=window.document.F.T2.value.concat(char);
+}
+i++
+}
+}
+
+function low(){
+window.document.F.T2.value="";
+var A=window.document.F.T1.value
+var i=0
+var special = [',','?','<','>','*',')','('];
+while(i <= A.length){
+var char=A.charAt(i);
+if (char == char.toLowerCase() & isNaN(char) & special.indexOf(char)==-1 ){
+window.document.F.T2.value=window.document.F.T2.value.concat(char);
+}
+i++
+}
+}
+
+function num(){
+window.document.F.T2.value="";
+var A=window.document.F.T1.value
+var i=0
+var special = [',','?','<','>','*',')','('];
+while(i <= A.length){
+var char=A.charAt(i);
+if (!isNaN(char*1)){
+window.document.F.T2.value=window.document.F.T2.value.concat(char);
+}
+i++
+}
+}
+
+function spe(){
+window.document.F.T2.value="";
+var A=window.document.F.T1.value
+var i=0
+var special = [',','?','<','>','*',')','('];
+while(i <= A.length - 1){
+var char=A.charAt(i);
+if (special.indexOf(char)!= -1 ){
+window.document.F.T2.value=window.document.F.T2.value.concat(char);
+}
+
+i++
+}
+}
+
+</script>
+
+
+
+
+
+
+<Form Name="F">
+<br>
+<B>Message:</B><input type="Text" name="T1"><br>
+<br>
+<input type="Button" name="B1" value="ABC" onclick="caps()">
+<input type="Button" name="B2" value="abc" onclick="low()">
+<input type="Button" name="B3" value="123" onclick="num()">
+<input type="Button" name="B4" value=",/*" onclick="spe()"><br>
+<br>
+<B>Output</B><input type="Text" name="T2"><br>
+
+</HTML>

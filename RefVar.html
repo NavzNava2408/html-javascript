@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html>
+<script>
+function add(){
+var T1 = window.document.F.x;
+var T2 = window.document.F.y;
+var T3 = window.document.F.z;
+T3.value = parseInt(T1.value) + parseInt(T2.value);
+T3.focus();
+}
+</script>
+<header> <B> <Font face="Helvetica" size="16" color="Red"> Adding Again! </Font> </B> </header>
+<form name="F">
+<br>
+<B><i>Num 1: </i></B><input Name="x"> <br>
+<br>
+<B><i>Num 2: </i></B><input Name="y"> <br>
+<br>
+<input Type="Button" onclick="add()" value="click"> <br>
+<br>
+<B><i>Ans: </B></i><input Name="z"> <br>
+</form>
+</html>

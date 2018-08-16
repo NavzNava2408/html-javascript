@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html>
+<script>
+function add(){
+var No1 = window.document.forms[0].elements[0].value;
+var No2 = window.document.forms[0].elements[1].value;
+var Res = parseInt(No1) + parseInt(No2);
+window.document.forms[0].elements[3].value=Res;
+}
+</script>
+<Form>
+<input> <input>
+<input type="button" onclick="add()" value="+">
+<input>
+</Form>
+<form>
+<input> <input> <input>
+</form>

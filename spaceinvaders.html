@@ -1,0 +1,64 @@
+<html>
+
+
+
+<body bgcolor="green" onkeydown="moving()" onclick="stopbird()">
+<span id="s"></span>
+
+<img src="arrow.png" id="fire" style="transform:rotate(-10deg); width:50px; height:100px; position:absolute; top:750; left:35; visibility:hidden"></img>
+
+<img src="cross.png" id="arrow" style="transform:rotate(285deg); width:100px; height:100px; position:absolute; top:780; left:10" ></img>
+
+</body>
+
+<script>
+var timer;
+var time;
+var fire;
+timer = setInterval(birds,1000);
+function firing(){
+if (parseInt(fire.style.top)<=1){
+alert("missed");
+}
+fire.style.top=parseInt(fire.style.top) - 10;
+
+
+}
+function stopbird(){
+window.clearInterval(timer);
+}
+
+time = setInterval(birddrop,5000);
+function moving(){
+var a = document.getElementById("arrow");
+if (event.keyCode==37){
+a.style.left=parseInt(a.style.left) - 5 + 'px';}
+if(event.keyCode==39){
+a.style.left=parseInt(a.style.left) + 5 + 'px';}
+if(event.keyCode==32){
+ fire = document.getElementById("fire");
+fire.style.left= parseInt(a.style.left) + 25;
+fire.style.visibility="visible";
+window.setInterval(firing,10);
+}
+}
+
+function birds(){
+document.getElementById("s").innerHTML += '<img src=' + '"birds.png"' + 'id=' + '"bird"' + 'style=' + '"width:50px; height:50px;position:absolute; top:10; left:' + Math.floor(Math.random()*801) + '"' + '></img>'
+}
+
+function birddrop(){
+var a = 10;
+var n= 1;
+var z = 10;
+window.document.images[1].style.top = parseInt(window.document.images[1].style.top) + a + 'px';
+window.document.images[2].style.top = parseInt(window.document.images[2].style.top) + a + 'px';
+window.document.images[3].style.top = parseInt(window.document.images[3].style.top) + a + 'px';
+window.document.images[4].style.top = parseInt(window.document.images[4].style.top) + a + 'px';
+
+a += 10
+n = z;
+z += 10
+}
+
+</script>

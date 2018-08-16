@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+<script>
+function increment(){
+var T = window.document.getElementById("A");
+T.value = parseInt(T.value) +1;
+}
+
+function decrement(){
+var t = window.document.getElementById("A");
+t.value = parseInt(t.value) -1;
+}
+</script>
+
+<input id="A" value="0">
+<input type="Button" value="Increment" onmousemove="increment()">
+<input type="Button" value="Decrement" onmousemove="decrement()">
+
+</html>

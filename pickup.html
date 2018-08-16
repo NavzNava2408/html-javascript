@@ -1,0 +1,67 @@
+
+<html>
+<script>
+var FS = 10;
+function moving(){
+var sp = window.document.getElementById("sp");
+sp.style.top = window.event.clientY;
+sp.style.left=window.event.clientX;
+if(window.event.ctrlKey){
+++FS;}
+if (window.event.altKey){
+--FS;}
+sp.style.fontSize=FS;
+}
+
+function pickup(){
+var sp = window.document.getElementById("sp");
+var T = window.document.getElementById("T");
+if(T.value ==""){
+sp.innerHTML != T.value;}
+else{
+sp.innerHTML = T.value;}
+sp.style.color="black";
+T.value="";
+}
+
+function red(){
+var sp = window.document.getElementById("sp");
+sp.style.color="red";
+}
+
+function green(){
+var sp = window.document.getElementById("sp");
+sp.style.color="green";
+}
+
+function blue(){
+var sp = window.document.getElementById("sp");
+sp.style.color="blue";
+}
+
+function yellow(){
+var sp = window.document.getElementById("sp");
+sp.style.color="yellow";
+}
+
+
+</script>
+
+
+<body onmouseMove="moving()">
+<span style="Position:absolute; top:0 ; left:0" id="sp">
+<input value="Manchester" onmouseleave="pickup()" id="T" >
+</span>
+<input  id="T" onmouseleave="pickup()">
+<br>
+<br>
+<div style="width:200px;height:100px;border:1px solid #000; background-color:red; Position:absolute; top:100; left:10" id="red" onmouseenter="red()"></div>
+<div style="width:200px; height:100px; border:1px solid #000; background-color:blue; Position:absolute; top:300; left:10" id="blue" onmouseenter="blue()">
+</div>
+<div style="width:200px; height:100px; border:1px solid #000; background-color:green; Position:absolute; top:100; left:600" id="green" onmouseenter="green()">
+</div>
+<div style="width:200px; height:100px; border:1px solid #000; background-color:yellow; Position:absolute; top:300; left:600" id="yellow" onmouseenter="yellow()">
+</div>
+
+
+
